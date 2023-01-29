@@ -2,7 +2,6 @@ function makeGrid() {
     const masterContainer = document.getElementById('master');
     const container = document.createElement('div');
     container.className = "container";
-    // console.log(container);
     masterContainer.appendChild(container);
       
 
@@ -14,42 +13,84 @@ function makeGrid() {
 
     const controlContainer = document.createElement('div');
     controlContainer.className = "controls";
-    // console.log(controlContainer);
     container.appendChild(controlContainer);
 
     
 }
 
-
-
-
 makeGrid();
 
 const gridElements = document.querySelectorAll('.grid-el');
-
 const active = true;
+const randomButton = document.getElementById('random');
+const yellowButton = document.getElementById('yellow');
+const greenButton = document.getElementById('green');
+const blueButton = document.getElementById('blue');
+const redButton = document.getElementById('red');
 
-window.addEventListener('mousedown', () => {
-    
+
+function startColoringEffect() {
     if (active) {
         gridElements.forEach((element) => {
             element.addEventListener('mouseenter', () => {
-                console.log('element clicked');
                 let x = Math.floor(Math.random() * 256);
                 let y = Math.floor(Math.random() * 256);
                 let z = Math.floor(Math.random() * 256);
                 let bgColor = "rgb(" + x + "," + y + "," + z + ")";
-             console.log(bgColor);
+                console.log(bgColor);
                 element.style.backgroundColor = bgColor;
-                
-                
-            })
-        })
-    } 
+            });
+        });
+    }
+}
 
-           
-    
-})
+function colorYellow() {
+    if (active) {
+        gridElements.forEach((element) => {
+            element.addEventListener('mouseenter', () => {
+                element.style.backgroundColor = 'yellow';
+            });
+        });
+    }
+}
+
+function colorGreen() {
+    if (active) {
+        gridElements.forEach((element) => {
+            element.addEventListener('mouseenter', () => {
+                element.style.backgroundColor = 'green';
+            });
+        });
+    }
+}
+
+function colorBlue() {
+    if (active) {
+        gridElements.forEach((element) => {
+            element.addEventListener('mouseenter', () => {
+                element.style.backgroundColor = 'blue';
+            });
+        });
+    }
+}
+
+function colorRed() {
+    if (active) {
+        gridElements.forEach((element) => {
+            element.addEventListener('mouseenter', () => {
+                element.style.backgroundColor = 'red';
+            });
+        });
+    }
+}
+
+
+
+randomButton.addEventListener('click', startColoringEffect);
+yellowButton.addEventListener('click', colorYellow);
+greenButton.addEventListener('click', colorGreen);
+blueButton.addEventListener('click', colorBlue);
+redButton.addEventListener('click', colorRed);
 
 // const colorButtons = document.querySelectorAll('.color-button');
 // let selectedColor = 'black';
