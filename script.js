@@ -11,9 +11,9 @@ function makeGrid() {
         container.appendChild(gridEl);
     }
 
-    const controlContainer = document.createElement('div');
-    controlContainer.className = "controls";
-    container.appendChild(controlContainer);
+    // const controlContainer = document.createElement('div');
+    // controlContainer.className = "controls";
+    // container.appendChild(controlContainer);
 
     
 }

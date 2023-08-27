@@ -9,12 +9,12 @@
 .container {
   position: relative;
   border: 30px solid #ee4545;
-  border-radius: 40px;
+  border-radius:4%;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  width: 500px;
-  height: 400px;
+  width: 675px;
+  height: 545px;
 }
 
 .buttons-container {
@@ -28,7 +28,7 @@
 }
 
 button {
-  padding: 1.5rem;
+  padding: 2.5rem;
   border: 0;
   display: flex;
   cursor: pointer;
@@ -45,10 +45,26 @@ button:active{
   scale: 0.9;
 }
 
+.fact-box {
+  max-width: 100px;
+}
+
 .grid-el {
   background-color: rgb(235, 235, 235);
   border: 0.2px solid rgb(207, 206, 206, 0.4);
-  border-opac
+  
+}
+
+p {
+  font-size: 15px;
+ 
+}
+
+.fact-box{
+  max-width: 981px;
+bordeR: 2px solid black;
+margin: 0 auto;
+padding: 2rem;
 }
 
 #red {
@@ -66,6 +82,12 @@ button:active{
 #yellow {
   background-color: yellow;
 }
+
+#erase {
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+
 
 #random {
   background: linear-gradient(to right, 
