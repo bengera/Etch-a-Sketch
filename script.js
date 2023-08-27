@@ -27,6 +27,7 @@ const yellowButton = document.getElementById('yellow');
 const greenButton = document.getElementById('green');
 const blueButton = document.getElementById('blue');
 const redButton = document.getElementById('red');
+const eraseButton = document.getElementById('erase');
 
 
 function startColoringEffect() {
@@ -84,6 +85,13 @@ function colorRed() {
     }
 }
 
+function eraseGrid() {
+    if (active) {
+        gridElements.forEach((element) => {
+              element.style.backgroundColor = 'white';
+        });
+    }
+}
 
 
 randomButton.addEventListener('click', startColoringEffect);
@@ -91,6 +99,7 @@ yellowButton.addEventListener('click', colorYellow);
 greenButton.addEventListener('click', colorGreen);
 blueButton.addEventListener('click', colorBlue);
 redButton.addEventListener('click', colorRed);
+eraseButton.addEventListener('click', eraseGrid);
 
 // const colorButtons = document.querySelectorAll('.color-button');
 // let selectedColor = 'black';
