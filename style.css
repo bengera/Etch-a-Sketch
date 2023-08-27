@@ -9,7 +9,7 @@
 .container {
   position: relative;
   border: 30px solid #ee4545;
-  border-radius:4%;
+  border-radius: 4%;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
@@ -24,7 +24,6 @@
   gap: 1rem;
   background-color: black;
   border: 2px solid black;
-
 }
 
 button {
@@ -32,8 +31,6 @@ button {
   border: 0;
   display: flex;
   cursor: pointer;
-
-  
 }
 
 button:hover {
@@ -41,7 +38,7 @@ button:hover {
   transition: all 0.3s;
 }
 
-button:active{
+button:active {
   scale: 0.9;
 }
 
@@ -52,19 +49,22 @@ button:active{
 .grid-el {
   background-color: rgb(235, 235, 235);
   border: 0.2px solid rgb(207, 206, 206, 0.4);
-  
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 5px;
 }
+
 
 p {
   font-size: 15px;
- 
 }
 
-.fact-box{
+.fact-box {
   max-width: 981px;
-bordeR: 2px solid black;
-margin: 0 auto;
-padding: 2rem;
+  border: 2px solid black;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 #red {
@@ -88,24 +88,23 @@ padding: 2rem;
   padding: 1.5rem;
 }
 
-
 #random {
-  background: linear-gradient(to right, 
-  #FF5733 0%, 
-  #FF5733 16.67%, 
-  #FFC300 16.67%, 
-  #FFC300 33.33%, 
-  #C70039 33.33%, 
-  #C70039 50%, 
-  #900C3F 50%, 
-  #900C3F 66.67%, 
-  #581845 66.67%, 
-  #581845 83.33%, 
-  #2274A5 83.33%, 
-  #2274A5 100%);
-
+  background: linear-gradient(
+    to right,
+    #ff5733 0%,
+    #ff5733 16.67%,
+    #ffc300 16.67%,
+    #ffc300 33.33%,
+    #c70039 33.33%,
+    #c70039 50%,
+    #900c3f 50%,
+    #900c3f 66.67%,
+    #581845 66.67%,
+    #581845 83.33%,
+    #2274a5 83.33%,
+    #2274a5 100%
+  );
 }
-
 
 .grid-el {
   /* border: 0.5px solid rgb(207, 207, 207); */
@@ -114,9 +113,39 @@ padding: 2rem;
 
 .controls {
   position: absolute;
-  bottom: -70px;
-  width: 500px;
-  height: 50px;
-  background-color: #373737;
+  bottom: -125px;
+  height: 118px;
+  left: 14px;
+  width: 640px;
+  background-color: #ee4545;
   border-radius: 10px;
 }
+
+.left-nob,
+.right-nob {
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 49%, rgba(255,255,255,1) 100%);
+}
+
+.left-nob {
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 5rem;
+  top: 1rem;
+}
+
+
+.right-nob {
+  width: 75px;
+  height: 75px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 5rem;
+  top: 1rem;
+}
+
+

@@ -11,10 +11,17 @@ function makeGrid() {
         container.appendChild(gridEl);
     }
 
-    // const controlContainer = document.createElement('div');
-    // controlContainer.className = "controls";
-    // container.appendChild(controlContainer);
+    const controlContainer = document.createElement('div');
+    controlContainer.className = "controls";
+    container.appendChild(controlContainer);
 
+    const leftNob = document.createElement('div');
+    leftNob.className = "left-nob";
+    controlContainer.appendChild(leftNob);
+
+    const rightNob = document.createElement('div');
+    rightNob.className = "right-nob";
+    controlContainer.appendChild(rightNob);
     
 }
 
@@ -27,6 +34,7 @@ const yellowButton = document.getElementById('yellow');
 const greenButton = document.getElementById('green');
 const blueButton = document.getElementById('blue');
 const redButton = document.getElementById('red');
+const emojiButton = document.getElementById('emoji');
 const eraseButton = document.getElementById('erase');
 
 
@@ -85,6 +93,17 @@ function colorRed() {
     }
 }
 
+function colorEmoji() {
+    if (active) {
+        gridElements.forEach((element) => {
+            element.addEventListener('mouseenter', () => {
+                element.innerText = '😃';
+            });
+        });
+    }
+    
+}
+
 function eraseGrid() {
     if (active) {
         gridElements.forEach((element) => {
@@ -99,6 +118,7 @@ yellowButton.addEventListener('click', colorYellow);
 greenButton.addEventListener('click', colorGreen);
 blueButton.addEventListener('click', colorBlue);
 redButton.addEventListener('click', colorRed);
+emojiButton.addEventListener('click', colorEmoji);
 eraseButton.addEventListener('click', eraseGrid);
 
 // const colorButtons = document.querySelectorAll('.color-button');
