@@ -55,7 +55,6 @@ button:active {
   padding-top: 5px;
 }
 
-
 p {
   font-size: 15px;
 }
@@ -113,18 +112,23 @@ p {
 
 .controls {
   position: absolute;
-  bottom: -125px;
   height: 118px;
-  left: 14px;
-  width: 640px;
+  bottom: -112px;
+  left: -10px;
+  width: 693px;
   background-color: #ee4545;
   border-radius: 10px;
 }
 
 .left-nob,
 .right-nob {
-  background: rgb(255,255,255);
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 49%, rgba(255,255,255,1) 100%);
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(235, 235, 235, 1) 49%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .left-nob {
@@ -133,10 +137,9 @@ p {
   background-color: white;
   border-radius: 50%;
   position: absolute;
-  left: 5rem;
+  left: 8rem;
   top: 1rem;
 }
-
 
 .right-nob {
   width: 75px;
@@ -144,8 +147,6 @@ p {
   background-color: white;
   border-radius: 50%;
   position: absolute;
-  right: 5rem;
+  right: 8rem;
   top: 1rem;
 }
-
-

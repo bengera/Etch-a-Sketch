@@ -34,7 +34,6 @@ const yellowButton = document.getElementById('yellow');
 const greenButton = document.getElementById('green');
 const blueButton = document.getElementById('blue');
 const redButton = document.getElementById('red');
-const emojiButton = document.getElementById('emoji');
 const eraseButton = document.getElementById('erase');
 
 
@@ -53,56 +52,17 @@ function startColoringEffect() {
     }
 }
 
-function colorYellow() {
+function colorGrid(color) {
     if (active) {
         gridElements.forEach((element) => {
             element.addEventListener('mouseenter', () => {
-                element.style.backgroundColor = 'yellow';
+                element.style.backgroundColor = color;
+                
             });
         });
     }
 }
-
-function colorGreen() {
-    if (active) {
-        gridElements.forEach((element) => {
-            element.addEventListener('mouseenter', () => {
-                element.style.backgroundColor = 'green';
-            });
-        });
-    }
-}
-
-function colorBlue() {
-    if (active) {
-        gridElements.forEach((element) => {
-            element.addEventListener('mouseenter', () => {
-                element.style.backgroundColor = 'blue';
-            });
-        });
-    }
-}
-
-function colorRed() {
-    if (active) {
-        gridElements.forEach((element) => {
-            element.addEventListener('mouseenter', () => {
-                element.style.backgroundColor = 'red';
-            });
-        });
-    }
-}
-
-function colorEmoji() {
-    if (active) {
-        gridElements.forEach((element) => {
-            element.addEventListener('mouseenter', () => {
-                element.innerText = '😃';
-            });
-        });
-    }
-    
-}
+   
 
 function eraseGrid() {
     if (active) {
@@ -113,53 +73,9 @@ function eraseGrid() {
 }
 
 
-randomButton.addEventListener('click', startColoringEffect);
-yellowButton.addEventListener('click', colorYellow);
-greenButton.addEventListener('click', colorGreen);
-blueButton.addEventListener('click', colorBlue);
-redButton.addEventListener('click', colorRed);
-emojiButton.addEventListener('click', colorEmoji);
+yellowButton.addEventListener('click', () => {colorGrid('yellow')});
+greenButton.addEventListener('click', () => colorGrid('green'));
+blueButton.addEventListener('click', () => colorGrid('blue'));
+redButton.addEventListener('click', () => colorGrid('red'));
 eraseButton.addEventListener('click', eraseGrid);
-
-// const colorButtons = document.querySelectorAll('.color-button');
-// let selectedColor = 'black';
-
-// colorButtons.forEach((button) => {
-//     button.addEventListener('click', (event) => {
-//         selectedColor = event.target.getAttribute('data-color');
-//     });
-// });
-
-// window.addEventListener('mousedown', () => {
-//     if (active) {
-//         gridElements.forEach((element) => {
-//             element.addEventListener('mouseenter', () => {
-//                 element.style.backgroundColor = selectedColor;
-//             });
-//         });
-//     }
-// });
-
-// const colors = ['red', 'green', 'blue', 'purple', 'orange'];
-
-// window.addEventListener('mousedown', () => {
-//     if (active) {
-//         gridElements.forEach((element) => {
-//             element.addEventListener('mouseenter', () => {
-//                 let randomColor = colors[Math.floor(Math.random() * colors.length)];
-//                 element.style.backgroundColor = randomColor;
-//             });
-//         });
-//     }
-// });
-
-
-
-//
-
-// const testBox = document.getElementById('test-box');
-
-// testBox.addEventListener('mouseenter', ()=> {
-//     testBox.style.backgroundColor = 'blue';
-
-// })
+randomButton.addEventListener('click', startColoringEffect);
